@@ -12,3 +12,5 @@ wheels/
 # pytest cache
 .pytest_cache/
 
+# Kaggle submission writeup
+KAGGLE_SUBMISSION.md
