@@ -1,0 +1,46 @@
+{
+  "nodes": {
+    "volunteer_group_a": {
+      "flood_level_m": 0.3,
+      "medical_demand": "HIGH",
+      "power_status": "PARTIAL",
+      "connectivity": "GOOD",
+      "population_at_risk": 240,
+      "last_updated_utc": "2026-07-04T12:00:00Z",
+      "landmark": "90 Feet Road relief camp"
+    },
+    "private_clinic_b": {
+      "flood_level_m": 0.1,
+      "medical_demand": "LOW",
+      "power_status": "FULL",
+      "connectivity": "GOOD",
+      "population_at_risk": 12,
+      "last_updated_utc": "2026-07-04T11:45:00Z",
+      "landmark": "Kumbharwada private clinic"
+    },
+    "community_centre_c": {
+      "flood_level_m": 0.8,
+      "medical_demand": "CRITICAL",
+      "power_status": "NONE",
+      "connectivity": "POOR",
+      "population_at_risk": 620,
+      "last_updated_utc": "2026-07-04T12:10:00Z",
+      "landmark": "Dharavi Main Road community hall"
+    },
+    "unknown_node": {
+      "flood_level_m": 0.5,
+      "medical_demand": "MEDIUM",
+      "power_status": "PARTIAL",
+      "connectivity": "POOR",
+      "population_at_risk": 100,
+      "last_updated_utc": "2026-07-04T12:00:00Z",
+      "landmark": "Unknown locality"
+    }
+  },
+  "global": {
+    "disaster_level": "SEVERE",
+    "active_since_utc": "2026-07-04T06:00:00Z",
+    "coordinator_node": "community_centre_c",
+    "total_affected_estimate": 5000
+  }
+}

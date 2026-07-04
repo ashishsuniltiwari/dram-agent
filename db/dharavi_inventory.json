@@ -1,0 +1,41 @@
+{
+  "inventory": {
+    "oxygen": 100,
+    "med_kits": 150,
+    "water": 1000
+  },
+  "nodes": {
+    "volunteer_group_a": {
+      "reputation": 0.9,
+      "history": [
+        "generous",
+        "truthful"
+      ],
+      "resources_consumed": 20.0,
+      "resources_contributed": 45.0,
+      "requests_total": 10,
+      "requests_truthful": 9
+    },
+    "private_clinic_b": {
+      "reputation": 0.4,
+      "history": [
+        "selfish",
+        "hoarding"
+      ],
+      "resources_consumed": 80.0,
+      "resources_contributed": 5.0,
+      "requests_total": 8,
+      "requests_truthful": 3
+    },
+    "community_centre_c": {
+      "reputation": 0.7,
+      "history": [
+        "cooperative"
+      ],
+      "resources_consumed": 30.0,
+      "resources_contributed": 30.0,
+      "requests_total": 6,
+      "requests_truthful": 5
+    }
+  }
+}

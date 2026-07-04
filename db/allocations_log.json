@@ -1,0 +1,37 @@
+{
+  "allocations": [
+    {
+      "order_id": "ORD-test-CRITICAL",
+      "node_id": "community_centre_c",
+      "urgency": "CRITICAL",
+      "approved": true,
+      "items_allocated": "[{\"item\": \"oxygen\", \"qty\": 10}]",
+      "gamma_score": 0.92,
+      "is_hoarder": false,
+      "summary": "Test allocation logged successfully.",
+      "timestamp_utc": "2026-07-04T15:10:02.246393+00:00"
+    },
+    {
+      "order_id": "ORD-test-audit-12345",
+      "node_id": "volunteer_group_a",
+      "urgency": "HIGH",
+      "approved": true,
+      "items_allocated": "[{\"item\": \"water\", \"qty\": 50}]",
+      "gamma_score": 0.85,
+      "is_hoarder": false,
+      "summary": "Unit test audit record.",
+      "timestamp_utc": "2026-07-04T15:11:01.999362+00:00"
+    },
+    {
+      "order_id": "ORD-denied-99",
+      "node_id": "private_clinic_b",
+      "urgency": "LOW",
+      "approved": false,
+      "items_allocated": "[]",
+      "gamma_score": 0.0,
+      "is_hoarder": true,
+      "summary": "Request denied — hoarder with low urgency.",
+      "timestamp_utc": "2026-07-04T15:11:02.010247+00:00"
+    }
+  ]
+}
