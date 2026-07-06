@@ -1,6 +1,7 @@
-# Disaster Resource Allocation Mesh (DRAM) 🌧️⚕️📦
+<h1 align="center">🌧️ Disaster Resource Allocation Mesh (DRAM) ⚕️📦</h1>
 
-An offline-first, game-theoretically secure multi-agent resource triage and allocation system designed for **Aapda Mitra** volunteers operating in the high-density sub-localities of **Dharavi, Mumbai** during severe monsoon flooding crises.
+<h3 align="center">An offline-first, game-theoretically secure multi-agent resource triage and allocation system designed for <b>Aapda Mitra</b> volunteers operating in the high-density sub-localities of <b>Dharavi, Mumbai</b> during severe monsoon flooding crises.</h3>
+
 
 DRAM is built on top of **Google's Agent Development Kit (ADK)** and the `google-genai` SDK. It coordinates resource allocation under severe supply constraints by translating game-theoretic principles—specifically the **Rawlsian Maximin principle** and non-linear hoarding penalties—into an automated multi-agent pipeline.
 
