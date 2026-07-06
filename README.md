@@ -10,7 +10,9 @@ DRAM is built on top of **Google's Agent Development Kit (ADK)** and the `google
 
 DRAM splits the cognitive burden of disaster resource triage across three distinct, specialized LLM-powered agents and a deterministic database security gateway. This prevents the "generous-agent bias" and LLM cognitive collapse typically seen when a single agent attempts to parse, evaluate, and allocate resources simultaneously.
 
-![System Architecture](docs/system_architecture.png)
+<p align="center">
+  <img src="docs/system_architecture.png" alt="System Architecture" width="720">
+</p>
 
 
 ---
