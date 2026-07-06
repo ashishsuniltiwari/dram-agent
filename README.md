@@ -10,52 +10,8 @@ DRAM is built on top of **Google's Agent Development Kit (ADK)** and the `google
 
 DRAM splits the cognitive burden of disaster resource triage across three distinct, specialized LLM-powered agents and a deterministic database security gateway. This prevents the "generous-agent bias" and LLM cognitive collapse typically seen when a single agent attempts to parse, evaluate, and allocate resources simultaneously.
 
-```mermaid
-graph TD
-    %% Define Nodes
-    RawInput[/"Noisy Volunteer Messages<br>(SMS / LoRa Mesh)"/]
-    
-    subgraph CognitivePipeline ["ADK Multi-Agent Cognitive Pipeline"]
-        IntakeAgent["Node 1: Meta Intake Agent<br>(Veil of Ignorance Parser)"]
-        AssessorAgent["Node 2: Assessor Agent<br>(Rawlsian Triage Gate)"]
-        AllocationAgent["Node 3: Task Generator Agent<br>(Allocation Order Formulator)"]
-    end
-    
-    subgraph DataSecurityGateway ["Security Gateway & Persistence (MCP)"]
-        MCPServer["DRAM FastMCP Server"]
-        TelemetryDB[("Telemetry DB<br>(telemetry.json)")]
-        InventoryDB[("Inventory DB<br>(dharavi_inventory.json)")]
-        AuditLog[("Audit Log<br>(allocations_log.json)")]
-    end
+![System Architecture](docs/system_architecture.png)
 
-    %% Define Flow
-    RawInput -->|Noisy Text| IntakeAgent
-    IntakeAgent -->|IntakeReport JSON| AssessorAgent
-    
-    AssessorAgent -->|Call Tool| MCPServer
-    MCPServer <-->|Read Node Stats| InventoryDB
-    MCPServer <-->|Read Live Sensors| TelemetryDB
-    
-    MCPServer -->|Return Γ(Aᵢ) & is_hoarder| AssessorAgent
-    AssessorAgent -->|TriageDecision JSON| AllocationAgent
-    
-    AllocationAgent -->|Call Tool| MCPServer
-    MCPServer <-->|Read Current Stock| InventoryDB
-    MCPServer -->|Deduct Stock & Write Audit| MCPServer
-    MCPServer -->|Commit Update| InventoryDB
-    MCPServer -->|Append Event| AuditLog
-    
-    AllocationAgent -->|Final AllocationOrder JSON| Output[/"Final Resource Order"/]
-
-    %% Styles
-    classDef agent fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px,color:#1a73e8;
-    classDef db fill:#f1f3f4,stroke:#5f6368,stroke-width:2px,color:#3c4043;
-    classDef input fill:#e6f4ea,stroke:#137333,stroke-width:2px,color:#137333;
-    
-    class IntakeAgent,AssessorAgent,AllocationAgent agent;
-    class TelemetryDB,InventoryDB,AuditLog,MCPServer db;
-    class RawInput,Output input;
-```
 
 ---
 
